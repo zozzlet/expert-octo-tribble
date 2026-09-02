@@ -3,85 +3,94 @@ KORYO TOURS - NEW TRIPS & EXPANSION NEWSLETTER
 
 File: koryo-new-trips-newsletter.html
 Paste this directly into MailerLite's "Custom HTML" / "Paste HTML" import
-option when creating a new campaign. Built as one 600px table-based email
+option when creating a new campaign, or open the draft campaign already
+sitting in your account (see below). Built as one 600px table-based email
 with light mode, dark mode (prefers-color-scheme + Outlook.com overrides)
-and a mobile-responsive layout, using the same Koryo stripe branding as
-your other newsletters. Font stack is 'Circular Standard', 'Karla',
-Helvetica, Arial, sans-serif throughout (email clients fall back to Karla
-or the system font since custom fonts can't be embedded in email).
+and a mobile-responsive layout, using the Koryo stripe branding plus a
+website-style tour card design (cream background, per-country accent
+colour, "SPACES LEFT" line) modelled on the Mongolia tour page example
+you sent. Font stack is 'Circular Standard', 'Karla', Helvetica, Arial,
+sans-serif throughout (email clients fall back to Karla or the system
+font since custom fonts can't be embedded in email).
 
-BEFORE YOU SEND, DO THREE THINGS
+LAYOUT
+------
+The newsletter is now organised country by country, each with its own
+coloured header bar and one cream tour card per trip beneath it:
+   IRAQ    - Iraq (1 trip)
+   SYRIA   - Syria (1 trip)
+   YEMEN   - Yemen Mainland, Socotra, Yemen Mainland & Socotra Combo (3 trips)
+   LIBYA   - Libya: East & West, Libya Total Solar Eclipse (2 trips)
+   NEPAL   - Nepal (1 trip)
+That's 8 trips total. Iraq and Syria are shown as two separate trips
+(not a combined card), each tagged "Part of our new expansion" since
+they kicked off the programme. Yemen/Libya/Nepal trips are tagged
+"New for 2026" since those launched this year.
+
+The copy in the "Our Expansion" section has also been corrected: it no
+longer implies Iraq and Syria were Koryo's first trips outside North
+Korea. It now says Koryo has run tours beyond North Korea for twenty
+years, and that Iraq and Syria specifically kicked off the new expansion
+programme.
+
+COLOUR PALETTE
+----------------
+I could not reach koryogroup.com from this sandbox to pull your exact
+brand hex values (outbound access to the site is blocked here), so the
+colours below are my best approximation of "yellow / ochre / indigo /
+teal / red / orange / green" built to look coherent together and to
+roughly match the tones in your Mongolia screenshot. Please sanity check
+these against your actual site styles/brand guide and tell me if any
+need adjusting, I can swap them in seconds.
+
+   Iraq, Syria, Yemen, Socotra, Yemen & Socotra Combo   Yellow   #D4A017
+   Libya (both trips)                                    Ochre    #A85A2C
+   Nepal                                                  Teal     #1E7268
+   Algeria (wait list)                                    Ochre    #A85A2C
+   Pakistan (wait list)                                   Indigo   #3D3A8C
+   Timor-Leste (wait list)                                Orange   #E2891F
+   Moldova & Transnistria (wait list)                     Red      #E8112D
+   Pacific 12 Combo (wait list)                           Green    #2E9B4C
+
+BEFORE YOU SEND, DO FOUR THINGS
 ---------------------------------
 
 1) REPLACE THE IMAGE PLACEHOLDERS
-   Every photo in the email is a MailerLite placeholder image. In the
-   MailerLite editor, click each placeholder and swap it for a real photo:
-     - Hero image (top): a collage or wide shot representing the expansion
-     - Iraq & Syria
-     - Yemen Mainland
-     - Socotra
-     - Yemen Mainland & Socotra Combo
-     - Libya: East & West
-     - Libya Total Solar Eclipse
-     - Nepal
+   Every photo is a MailerLite placeholder image. Click each one in the
+   MailerLite editor and swap it for a real photo: hero image, Iraq,
+   Syria, Yemen Mainland, Socotra, Yemen & Socotra Combo, Libya East &
+   West, Libya Total Solar Eclipse, Nepal.
 
 2) REPLACE THE LINK PLACEHOLDERS
-   Search the HTML for "PASTE-" and you'll find every link that needs a
-   real URL, e.g. PASTE-YEMEN-MAINLAND-LEARN-MORE-URL-HERE and
-   PASTE-YEMEN-MAINLAND-BOOK-URL-HERE. There are two per new trip (Learn
-   More -> the tour page on koryogroup.com, Book Now -> the booking page)
-   and one per wait list trip (see below). I didn't guess at real
-   koryogroup.com URLs since I can't verify them, so they're left as
-   clearly-marked placeholders rather than made-up links.
+   Search the HTML for "PASTE-" to find every link needing a real URL,
+   two per trip (Learn More -> tour page, Book Now -> booking page) plus
+   one per wait list trip. I haven't guessed at real koryogroup.com URLs
+   since I can't verify them.
 
-3) FILL IN "PLACES LEFT"
-   Every trip card has a small pill badge reading "XX places left". Find
-   and replace "XX" with the real live availability figure for each trip
-   before sending, since I don't have access to your booking system.
+3) FILL IN PRICE AND SPACES LEFT
+   Each card now has a "From [PRICE] USD per person" line and a
+   "Spaces left: XX" line, matching your site's own tour page format.
+   Replace [PRICE] and XX with the real current figures for each trip.
 
-SETTING UP THE WAIT LIST BUTTONS IN MAILERLITE
-------------------------------------------------
+4) DOUBLE-CHECK THE COLOURS
+   See the palette above, these are my best guess without live access
+   to your site's styles.
 
-I don't have API access to your MailerLite account from this session, so
-I can't create the groups or wire up the automations directly. Here's how
-to get the exact behaviour you asked for (click a trip's wait list button
--> subscriber gets added to that trip's group) in about ten minutes,
-using MailerLite's built-in features. No custom code or landing pages
-needed.
+MAILERLITE STATUS (already done)
+-----------------------------------
+- Five wait list groups exist in your MailerLite account: Algeria Wait
+  List, Pakistan Wait List, Timor-Leste Wait List, Moldova & Transnistria
+  Wait List, Pacific 12 Combo Wait List. All empty, ready to receive
+  subscribers.
+- A draft campaign called "New Trips & Expansion - September 2026" is
+  sitting in your MailerLite account (Koryo Tours list, 15,515
+  recipients), loaded with this HTML. Nothing has been sent.
 
-Step 1: Create five groups (Subscribers > Groups > Create group):
-   - Algeria Wait List
-   - Pakistan Wait List
-   - Timor-Leste Wait List
-   - Moldova & Transnistria Wait List
-   - Pacific 12 Combo Wait List
-
-Step 2: Give each wait list button its own unique URL. The simplest way
-is to point each one at the matching page on your site with a distinct
-query string, e.g.:
-   https://koryogroup.com/wait-list?tour=algeria
-   https://koryogroup.com/wait-list?tour=pakistan
-   https://koryogroup.com/wait-list?tour=timor-leste
-   https://koryogroup.com/wait-list?tour=moldova-transnistria
-   https://koryogroup.com/wait-list?tour=pacific-12-combo
-(These can all point to the same landing page since the query string is
-only there to make each link unique for the next step. Or use five
-distinct real pages if you'd rather. Either way, paste the final URLs
-into the matching "PASTE-...-WAITLIST-URL-HERE" spots in the HTML.)
-
-Step 3: In MailerLite, go to Automations > Create automation, and for
-each of the five trips set:
-   Trigger:  "Subscriber clicks a link" -> paste that trip's exact URL
-   Action:   "Add to group" -> that trip's wait list group
-
-Once that's set up, anyone who clicks "Add Me to the Algeria Wait List"
-in this campaign (or any future campaign using the same link) is added
-straight to the Algeria Wait List group automatically. Repeat for the
-other four.
-
-If you'd ever like me to do this setup for you directly, connect a
-MailerLite integration/API key to this session and I can create the
-groups and automations for you instead of writing out these steps.
+Whenever you finish the edits above and send the campaign yourself (or
+ask me to), tell me and I'll pull the five wait-list tracked-link IDs
+from the sent campaign and wire up the five click-to-group automations
+right away. MailerLite only generates those trackable link IDs once a
+campaign has actually gone out, so that step has to happen after send.
 
 TAGLINE & VOICE
 -----------------
@@ -91,10 +100,9 @@ requested. Copy is written in friendly Koryo voice with no em dashes.
 STATS USED IN THE "OUR EXPANSION" SECTION
 --------------------------------------------
 3 new countries this year (Yemen, Libya, Nepal)
-6 new trips this year (Yemen Mainland, Socotra, Yemen Mainland & Socotra
-Combo, Libya East & West, Libya Total Solar Eclipse, Nepal)
-Iraq & Syria is called out separately as "where it started", since you
-mentioned that one launched a while ago rather than this year, it's
-framed as the origin of the expansion programme rather than a "new this
-year" trip. Double check these numbers against your own records before
-sending.
+8 trips total in the expansion (Iraq, Syria, Yemen Mainland, Socotra,
+Yemen & Socotra Combo, Libya East & West, Libya Total Solar Eclipse,
+Nepal)
+20 years beyond North Korea (as you mentioned Koryo has run other tours
+for about twenty years). Double check this figure, it's a placeholder
+based on what you told me, not something I've verified independently.
