@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wait List | Koryo Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#E8112D;
+    --teal:#45B5AA;
+    --orange:#F49B1B;
+    --indigo:#3D3A8C;
+    --green:#2E9B4C;
+
+    --algeria:#A85A2C;
+    --pakistan:#3D3A8C;
+    --timor:#E2891F;
+    --moldova:#E8112D;
+    --pacific:#2E9B4C;
+
+    --ink:#241D15;
+    --slate:#6B6459;
+    --faint:#9A9184;
+    --cream:#FBF3EA;
+    --surface:#FFFFFF;
+    --line:#E8DFD1;
+    --shadow:0 1px 2px rgba(36,29,21,.05), 0 14px 34px rgba(36,29,21,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#F3ECE1; --slate:#C9BEAE; --faint:#7C7364;
+      --cream:#18140F; --surface:#241D15; --line:#3A3226;
+      --shadow:0 1px 2px rgba(0,0,0,.35), 0 16px 36px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Circular Standard','Karla',Helvetica,Arial,sans-serif;
+  }
+  .stripe{display:flex;height:7px;width:100%;}
+  .stripe span{flex:1;}
+  .wrap{max-width:560px;margin:0 auto;padding:44px 24px 60px;}
+  header.top{text-align:center;margin-bottom:34px;}
+  .logo{
+    display:inline-block;
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:3px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .logo span{color:var(--red);}
+  .hero{text-align:center;}
+  .eyebrow{
+    display:inline-block;
+    background:var(--red);
+    color:#FFFFFF;
+    font-weight:800;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    padding:6px 16px;
+    border-radius:20px;
+  }
+  h1{
+    font-size:34px;
+    line-height:1.1;
+    font-weight:800;
+    letter-spacing:-0.6px;
+    margin:16px 0 0;
+  }
+  .lede{
+    font-size:16px;
+    line-height:1.6;
+    color:var(--slate);
+    max-width:42ch;
+    margin:14px auto 0;
+  }
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    margin:26px 0 0;
+  }
+  .chip{
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:0.3px;
+    padding:7px 14px;
+    border-radius:20px;
+    color:#FFFFFF;
+    white-space:nowrap;
+  }
+  .chip.algeria{background:var(--algeria);}
+  .chip.pakistan{background:var(--pakistan);}
+  .chip.timor{background:var(--timor);color:#3A1F00;}
+  .chip.moldova{background:var(--moldova);}
+  .chip.pacific{background:var(--pacific);}
+
+  .signup-card{
+    margin-top:36px;
+    background:var(--surface);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:34px 30px;
+  }
+  .signup-card .kicker{
+    text-align:center;
+    font-size:13px;
+    font-weight:700;
+    color:var(--slate);
+    margin:0 0 22px;
+  }
+  .signup-card .kicker strong{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<div class="stripe">
+  <span style="background:var(--red)"></span>
+  <span style="background:var(--teal)"></span>
+  <span style="background:var(--orange)"></span>
+  <span style="background:var(--indigo)"></span>
+  <span style="background:var(--green)"></span>
+</div>
+
+<div class="wrap">
+
+  <header class="top">
+    <a class="logo" href="https://koryogroup.com" target="_blank" rel="noopener">KORYO <span>TOURS</span></a>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Coming soon</div>
+    <h1>Get There First</h1>
+    <p class="lede">Five trips are next on our list, landing later this year or in 2027. Join one, a few, or all of them below and we'll email you the moment booking opens, often before we announce it anywhere else.</p>
+
+    <div class="chips">
+      <span class="chip algeria">Algeria</span>
+      <span class="chip pakistan">Pakistan</span>
+      <span class="chip timor">Timor-Leste</span>
+      <span class="chip moldova">Moldova &amp; Transnistria</span>
+      <span class="chip pacific">Pacific 12 Combo</span>
+    </div>
+  </div>
+
+  <div class="signup-card">
+    <p class="kicker">Tick the wait lists you want, drop in your email, and <strong>you're on the list.</strong></p>
+
+    <!-- PASTE YOUR MAILERLITE SIGN-UP FORM HERE -->
+
+  </div>
+
+  <footer style="text-align:center; margin-top:38px; font-size:12.5px; color:var(--faint);">
+    <div style="font-weight:700; color:var(--slate); margin-bottom:6px; font-size:13px;">Experts in Travel to Rather Unusual Destinations</div>
+    <a href="https://koryogroup.com" target="_blank" rel="noopener" style="color:var(--faint);">Browse what's already bookable at koryogroup.com</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
