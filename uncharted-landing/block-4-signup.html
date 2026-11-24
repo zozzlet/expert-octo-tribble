@@ -1,0 +1,45 @@
+<!-- UNCHARTED | BLOCK 4 of 5 | SIGN-UP FORM -->
+<!-- Replace FORM_ID below with your MailerLite form ID (Forms > Embedded form > HTML code) -->
+<style>
+.ku-su{background:#F1EEE6;color:#3A4A5A;font-family:'Inter',Arial,sans-serif;padding:72px 24px;text-align:center}
+.ku-su *{box-sizing:border-box}
+.ku-su .ku-box{max-width:620px;margin:0 auto;background:#fff;border-radius:18px;padding:48px 36px 40px;box-shadow:0 18px 40px rgba(58,74,90,.12);position:relative;overflow:hidden}
+.ku-su .ku-box:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,#4AB5A5 0 20%,#DF1D25 20% 40%,#4EA96C 40% 60%,#2F257B 60% 80%,#F69B29 80%)}
+.ku-su .ku-eye{font:600 12px/1 'Montserrat',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;margin:0 0 14px}
+.ku-su h2{font:italic 800 clamp(26px,4vw,38px)/1.08 'Montserrat',Arial,sans-serif;text-transform:uppercase;margin:0 0 14px}
+.ku-su p{font-size:16px;line-height:1.6;margin:0 auto 28px;max-width:460px;color:#56636F}
+.ku-su form{display:grid;gap:12px}
+.ku-su input{width:100%;font:16px 'Inter',Arial,sans-serif;color:#3A4A5A;background:#F7F5F0;border:2px solid #E2DED4;border-radius:10px;padding:16px 18px;outline:none}
+.ku-su input:focus{border-color:#4AB5A5;background:#fff}
+.ku-su button{font:italic 700 16px/1 'Montserrat',Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:#3A4A5A;border:0;border-radius:999px;padding:19px 24px;cursor:pointer;margin-top:6px}
+.ku-su button:hover{background:#2B3846}
+.ku-su .ku-fine{font-size:12px;color:#8A949E;margin:16px 0 0}
+.ku-su .ku-ok{display:none;padding:12px 0}
+.ku-su .ku-ok h3{font:italic 800 24px/1.1 'Montserrat',Arial,sans-serif;text-transform:uppercase;margin:0 0 10px;color:#4EA96C}
+.ku-su.done form,.ku-su.done .ku-fine{display:none}.ku-su.done .ku-ok{display:block}
+@media(max-width:600px){.ku-su{padding:56px 16px}.ku-su .ku-box{padding:40px 22px 32px}}
+</style>
+<div class="ku-su" id="ku-signup">
+  <div class="ku-box">
+    <p class="ku-eye">03 &nbsp;Don't miss it</p>
+    <h2>Join the Uncharted mailing list</h2>
+    <p>Be the first to hear about Expedition 001 and every Uncharted adventure after it. Spaces are incredibly limited.</p>
+    <form id="ku-form" action="https://assets.mailerlite.com/jsonp/483985/forms/FORM_ID/subscribe" method="post">
+      <input type="text" name="fields[name]" placeholder="First name" autocomplete="given-name" aria-label="First name">
+      <input type="email" name="fields[email]" placeholder="Email address" autocomplete="email" aria-label="Email address" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Count me in</button>
+    </form>
+    <div class="ku-ok">
+      <h3>You're on the list!</h3>
+      <p>Keep an eye on your inbox. Something illuminating is coming.</p>
+    </div>
+    <p class="ku-fine">No spam, just Uncharted news. Unsubscribe any time.</p>
+  </div>
+</div>
+<script>
+(function(){var f=document.getElementById('ku-form');if(!f)return;
+f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Sending…';
+fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'}).then(function(){document.getElementById('ku-signup').className+=' done'}).catch(function(){b.disabled=false;b.textContent='Try again'})});})();
+</script>
